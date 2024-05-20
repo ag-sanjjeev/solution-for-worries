@@ -5,14 +5,208 @@
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<title>Solution For All Your Worries</title>
 
-</head>
-<body>
+	<!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="./thirdparty/bootstrap/bootstrap.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="./thirdparty/css/animate.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="./thirdparty/fontawesome/css/all.css" media="all" />
 
-	<div class="solution_wrapper">
+	<!-- Custom Styles -->
+	<link rel="stylesheet" type="text/css" href="./src/main.css" media="all" />
+
+</head>
+<body class="container-fluid py-4">
+
+<div class="row justify-content-center">
+	
+	<div class="col-md-8 solution_wrapper">
 		
-		
+		<div class="solution_header">
+			<h2 class="text-center text-dark text-capitalize py-4">Solution for your Worries</h2>
+			<h2 class="text-center text-dark">Are You Worry About Your Problems?</h2>
+			<h1 class="text-center text-primary fw-bold display-3">Here,The Solution</h1>		
+		</div>
+
+		<div class="solution_prompt_wrapper bg-light border border-primary rounded-2" id="solution_prompt_wrapper">
+			
+			<!-- Prompt Welcome -->
+			<div id="prompt_welcome">
+				
+				<div class="h-100 row d-flex align-items-center justify-content-center" id="prompt_container">
+				
+					<div class="col text-center">
+						
+						<h3 class="text-center">Click <span class="badge rounded-pill bg-primary"><i class="fa fa-arrow-right"></i></span> Button To <span class="badge rounded-pill border border-primary text-primary">Start</span></h3>
+
+						<button type="button" class="btn btn-light border border-primary text-center fw-bolder start-btn circle-scroll-btn" onclick="startPrompt()">
+							
+							<span class="text text-primary fw-bolder">Start</span>
+							<span class="circle bg-primary">
+								<i class="fa fa-arrow-right bg-primary text-light"></i>
+							</span>
+
+						</button>
+
+					</div>
+
+				</div>	
+
+			</div>
+			<!-- ./Prompt Welcome -->
+
+			<!-- Prompt First -->
+			<div id="prompt_first">
+				
+				<div class="h-100 row d-flex align-items-center justify-content-center" id="prompt_container">
+				
+					<div class="col text-center">
+						
+						<p class="text-muted">#Answer the following question...</p>
+						<h3 class="text-center">Do you have problems in your life?</h3>
+
+						<div class="btns-container">
+							
+							<button type="button" class="btn btn-light border border-danger text-center fw-bolder start-btn circle-scroll-btn" onclick="respondFirstPrompt(1)">
+							
+								<span class="text text-danger fw-bolder">Yes</span>
+								<span class="circle bg-danger">
+									<i class="fa fa-frown bg-danger text-light"></i>
+								</span>
+
+							</button>
+
+							<button type="button" class="btn btn-light border border-success text-center fw-bolder start-btn circle-scroll-btn" onclick="respondFirstPrompt(0)">
+							
+								<span class="text text-success fw-bolder">No</span>
+								<span class="circle bg-success">
+									<i class="fa fa-smile bg-success text-light"></i>
+								</span>
+
+							</button>
+
+						</div>
+
+					</div>
+
+				</div>	
+
+			</div>
+			<!-- ./Prompt First -->
+
+			<!-- Prompt Second -->
+			<div id="prompt_second">
+				
+				<div class="h-100 row d-flex align-items-center justify-content-center" id="prompt_container">
+				
+					<div class="col text-center">
+						
+						<p class="text-muted">#Answer the following question...</p>
+						<h3 class="text-center">Can you do something about it?</h3>
+
+						<div class="btns-container">
+							
+							
+							<button type="button" class="btn btn-light border border-success text-center fw-bolder start-btn circle-scroll-btn" onclick="respondSecondPrompt(1)">
+							
+								<span class="text text-success fw-bolder">Yes</span>
+								<span class="circle bg-success">
+									<i class="fa fa-smile bg-success text-light"></i>
+								</span>
+
+							</button>
+
+							<button type="button" class="btn btn-light border border-danger text-center fw-bolder start-btn circle-scroll-btn" onclick="respondSecondPrompt(0)">
+							
+								<span class="text text-danger fw-bolder">No</span>
+								<span class="circle bg-danger">
+									<i class="fa fa-frown bg-danger text-light"></i>
+								</span>
+
+							</button>
+
+						</div>
+
+					</div>
+
+				</div>	
+
+			</div>
+			<!-- ./Prompt Second -->
+
+			<!-- Prompt Third -->
+			<div id="prompt_third">
+				
+				<div class="h-100 row d-flex align-items-center justify-content-center" id="prompt_container">
+				
+					<div class="col text-center">
+						
+						<p class="text-muted">#Answer the following question...</p>
+						<h3 class="text-center">Then Why you need to WORRY... <br> Just Relax...</h3>
+
+						<div class="mt-5">
+							<p class="lead">Is this helps you?</p>
+						</div>
+
+						<div class="btns-container">
+							
+							
+							<button type="button" class="btn btn-light border border-success text-center fw-bolder start-btn circle-scroll-btn" onclick="respondThirdPrompt(1)">
+							
+								<span class="text text-success fw-bolder">Yes</span>
+								<span class="circle bg-success">
+									<i class="fa fa-smile bg-success text-light"></i>
+								</span>
+
+							</button>
+
+							<button type="button" class="btn btn-light border border-danger text-center fw-bolder start-btn circle-scroll-btn" onclick="respondThirdPrompt(0)">
+							
+								<span class="text text-danger fw-bolder">No</span>
+								<span class="circle bg-danger">
+									<i class="fa fa-frown bg-danger text-light"></i>
+								</span>
+
+							</button>
+
+						</div>
+
+					</div>
+
+				</div>	
+
+			</div>
+			<!-- ./Prompt Third -->
+
+			<!-- Prompt Final -->
+			<div id="prompt_final">
+				
+				<div class="h-100 row d-flex align-items-center justify-content-center" id="prompt_container">
+				
+					<div class="col text-center">
+												
+						<h3 class="text-center">Happy Day... <br><br> &nbsp; &nbsp;Happy Life...</h3>
+
+						<div class="mt-5">
+							<p class="text-muted">#Maded For Happiness <i class="fa fa-smile text-muted"></i></p>
+						</div>						
+
+					</div>
+
+				</div>	
+
+			</div>
+			<!-- ./Prompt Final -->
+
+		</div>
 
 	</div>
 
+</div>
+
+<!-- Scripts -->
+<script type="text/javascript" src="./thirdparty/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="./thirdparty/bootstrap/bootstrap.bundle.js"></script>
+
+<!-- Custom Script -->
+<script type="text/javascript" src="./src/main.js"></script>
 </body>
 </html>

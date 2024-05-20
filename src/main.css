@@ -1,0 +1,66 @@
+/*===========================*/
+/* Solution For Your Worries */
+/*===========================*/
+
+.solution_wrapper .solution_prompt_wrapper {
+	min-width: 300px;
+	min-height: 500px;
+}
+
+#prompt_welcome, #prompt_first, #prompt_second, #prompt_third, #prompt_final {
+	height: 0px !important;
+	width: 0px !important;
+	overflow: hidden;	
+	opacity: 0;
+}
+
+#prompt_welcome.active, #prompt_first.active, #prompt_second.active, #prompt_third.active, #prompt_final.active {
+	height: 500px !important;
+	width: auto !important;
+	opacity: 1;
+	transition: opacity 1s linear;
+}
+
+#prompt_container {
+	min-width: 300px;
+	min-height: 500px;
+}
+
+.circle-scroll-btn {
+	width: auto;
+	overflow: hidden;	
+	margin: 0;
+	padding: 0;
+	border-radius: 50% !important;
+	transition: all 0.3s linear;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: nowrap;
+}
+
+.circle-scroll-btn span.circle {
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: nowrap;	
+	margin: 1px;
+}
+
+.circle-scroll-btn span.text {
+	width: 0;
+    overflow: hidden;    
+    transition: width 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+.circle-scroll-btn:hover {
+	border-radius: 2rem !important;
+	border-width: 1px !important;
+}
+
+.circle-scroll-btn:hover span.text {
+	width: 50px;	
+}
