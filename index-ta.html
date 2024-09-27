@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="initial-scale=1, width=device-width" />
+	<title>உங்கள் அனைத்து விதமான பிரச்சனைகளுக்கான தீர்வு</title>
+
+	<!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="./thirdparty/bootstrap/bootstrap.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="./thirdparty/css/animate.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="./thirdparty/fontawesome/css/all.css" media="all" />
+
+	<!-- Custom Styles -->
+	<link rel="stylesheet" type="text/css" href="./src/main.css" media="all" />
+
+</head>
+<body class="container-fluid py-4">
+
+<div class="row justify-content-center">
+	
+	<div class="col-md-8 solution_wrapper">
+		
+		<div class="solution_header">
+			<h4 class="text-center text-dark text-capitalize py-4">உங்கள் பிரச்சனைகளுக்கான தீர்வு</h4>
+			<h4 class="text-center text-dark lh-lg">உங்கள் பிரச்சனைகளுக்காக, நீங்கள் கவலைப்படுகிறீர்களா?</h4>
+			<h3 class="text-center text-primary fw-bold py-4">இதோ, உங்களுக்கான தீர்வு...</h3>		
+		</div>
+
+		<div class="solution_prompt_wrapper bg-light border border-primary rounded-2" id="solution_prompt_wrapper">
+			
+			<!-- Prompt Welcome -->
+			<div id="prompt_welcome">
+				
+				<div class="h-100 row d-flex align-items-center justify-content-center" id="prompt_container">
+				
+					<div class="col text-center">
+						
+						<h3 class="text-center"><span class="badge rounded-pill border border-primary text-primary">துவங்க</span> என்ற பொத்தானை <span class="badge rounded-pill bg-primary"><i class="fa fa-arrow-right"></i></span>  தொடவும் </h3>
+
+						<button type="button" class="btn btn-light border border-primary text-center fw-bolder start-btn circle-scroll-btn" onclick="startPrompt()">
+							
+							<span class="text text-primary fw-bolder">துவங்கு</span>
+							<span class="circle bg-primary">
+								<i class="fa fa-arrow-right bg-primary text-light"></i>
+							</span>
+
+						</button>
+
+					</div>
+
+				</div>	
+
+			</div>
+			<!-- ./Prompt Welcome -->
+
+			<!-- Prompt First -->
+			<div id="prompt_first">
+				
+				<div class="h-100 row d-flex align-items-center justify-content-center" id="prompt_container">
+				
+					<div class="col text-center">
+						
+						<p class="text-muted">#பின்வரும் வினாவுக்கு பதிலளிக்க...</p>
+						<h5 class="text-center lh-lg">உங்கள் வாழ்க்கையில் ஏதேனும் பிரச்சனை இருக்கிறதா?</h5>
+
+						<div class="btns-container py-3">
+							
+							<button type="button" class="btn btn-light border border-danger text-center fw-bolder start-btn circle-scroll-btn" onclick="respondFirstPrompt(1)">
+							
+								<span class="text text-danger fw-bolder">ஆம்</span>
+								<span class="circle bg-danger">
+									<i class="fa fa-frown bg-danger text-light"></i>
+								</span>
+
+							</button>
+
+							<button type="button" class="btn btn-light border border-success text-center fw-bolder start-btn circle-scroll-btn" onclick="respondFirstPrompt(0)">
+							
+								<span class="text text-success fw-bolder">இல்லை</span>
+								<span class="circle bg-success">
+									<i class="fa fa-smile bg-success text-light"></i>
+								</span>
+
+							</button>
+
+						</div>
+
+					</div>
+
+				</div>	
+
+			</div>
+			<!-- ./Prompt First -->
+
+			<!-- Prompt Second -->
+			<div id="prompt_second">
+				
+				<div class="h-100 row d-flex align-items-center justify-content-center" id="prompt_container">
+				
+					<div class="col text-center">
+						
+						<p class="text-muted">#பின்வரும் வினாவுக்கு பதிலளிக்க...</p>
+						<h5 class="text-center lh-lg">அந்த பிரச்சனை குறித்து, உங்களால் ஏதேனும் செய்யமுடியுமா?</h5>
+
+						<div class="btns-container py-3">
+							<button type="button" class="btn btn-light border border-success text-center fw-bolder start-btn circle-scroll-btn" onclick="respondSecondPrompt(1)">
+							
+								<span class="text text-success fw-bolder">ஆம்</span>
+								<span class="circle bg-success">
+									<i class="fa fa-smile bg-success text-light"></i>
+								</span>
+
+							</button>
+
+							<button type="button" class="btn btn-light border border-danger text-center fw-bolder start-btn circle-scroll-btn" onclick="respondSecondPrompt(0)">
+							
+								<span class="text text-danger fw-bolder">இல்லை</span>
+								<span class="circle bg-danger">
+									<i class="fa fa-frown bg-danger text-light"></i>
+								</span>
+
+							</button>
+
+						</div>
+
+					</div>
+
+				</div>	
+
+			</div>
+			<!-- ./Prompt Second -->
+
+			<!-- Prompt Third -->
+			<div id="prompt_third">
+				
+				<div class="h-100 row d-flex align-items-center justify-content-center" id="prompt_container">
+				
+					<div class="col text-center">
+						
+						<p class="text-muted">#பின்வரும் வினாவுக்கு பதிலளிக்க...</p>
+						<h5 class="text-center lh-lg">பிறகு, ஏன் அதைப்பற்றி நீங்கள் கவலைப்பட வேண்டும்?<br> சற்று மனத்திற்கு ஓய்வு தருக...</h5>
+
+						<div class="mt-5">
+							<p class="small">இது பயனுள்ளதாக இருந்ததா?</p>
+						</div>
+
+						<div class="btns-container py-3">
+							
+							<button type="button" class="btn btn-light border border-success text-center fw-bolder start-btn circle-scroll-btn" onclick="respondThirdPrompt(1)">
+							
+								<span class="text text-success fw-bolder">ஆம்</span>
+								<span class="circle bg-success">
+									<i class="fa fa-smile bg-success text-light"></i>
+								</span>
+
+							</button>
+
+							<button type="button" class="btn btn-light border border-danger text-center fw-bolder start-btn circle-scroll-btn" onclick="respondThirdPrompt(0)">
+							
+								<span class="text text-danger fw-bolder">இல்லை</span>
+								<span class="circle bg-danger">
+									<i class="fa fa-frown bg-danger text-light"></i>
+								</span>
+
+							</button>
+
+						</div>
+
+					</div>
+
+				</div>	
+
+			</div>
+			<!-- ./Prompt Third -->
+
+			<!-- Prompt Final -->
+			<div id="prompt_final">
+				
+				<div class="h-100 row d-flex align-items-center justify-content-center" id="prompt_container">
+				
+					<div class="col text-center">
+												
+						<h3 class="text-center">இனிய நாள்... <br><br> &nbsp; &nbsp;மகிழ்ச்சியான வாழ்க்கை...</h3>
+
+						<div class="mt-5">
+							<p class="text-muted">#மனமகிழ்ச்சிக்காக உருவாக்கப்பட்டது <i class="fa fa-smile text-muted"></i></p>
+						</div>						
+
+					</div>
+
+				</div>	
+
+			</div>
+			<!-- ./Prompt Final -->
+
+		</div>
+
+	</div>
+
+</div>
+
+<!-- Scripts -->
+<script type="text/javascript" src="./thirdparty/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="./thirdparty/bootstrap/bootstrap.bundle.js"></script>
+
+<!-- Custom Script -->
+<script type="text/javascript" src="./src/main.js"></script>
+</body>
+</html>
