@@ -51,7 +51,8 @@
 }
 
 .circle-scroll-btn span.text {
-	width: 0;
+		width: 0;
+		font-size: 0;
     overflow: hidden;    
     transition: width 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
@@ -62,7 +63,8 @@
 }
 
 .circle-scroll-btn:hover span.text {
-	width: 100%;	
+	width: 100%;
+	font-size: initial;	
 }
 
 .circle-scroll-btn:hover span.circle {
